@@ -1,0 +1,7 @@
+- alias: hasura
+  config:
+    configmap: controller-conf
+    namespace: club72-hasura
+  data: null
+  kubeContext: club72
+  name: club72
