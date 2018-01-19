@@ -1,0 +1,6 @@
+- args:
+    sql: CREATE TABLE "test_table"("test" integer NOT NULL, PRIMARY KEY ("test") )
+  type: run_sql
+- args:
+    name: test_table
+  type: add_existing_table_or_view
