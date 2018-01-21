@@ -98,59 +98,38 @@ app.get("/authors", function(req,res){
   })
 })
 
-// Uncomment to add a new route which returns hello world as a JSON
-app.get('/api/winloss', function(req, res) {
+app.get('/api/getLeagueList', function(req, res) {
+  res.json([
+    "epl", "La Liga" 
+  ]);
+});
+
+app.get('/api/getLeagueTable', function(req, res) {
   res.json({
-    "rcb": {
-      win: 5,
-      loss: 12,
-      draw: 2
+    "arsenal" : {
+      win: 4, draw: 2, loss: 1, goalsScored: 10, goalsAgaist: 5
     },
-    "mumbai indians": {
-      win: 5,
-      loss: 12,
-      draw: 2
+    "manchestar united" : {
+      win: 4, draw: 2, loss: 1, goalsScored: 10, goalsAgaist: 5
     },
-    "Sunrisers Hyderabad": {
-      win: 2,
-      loss:19,
-      draw:8
+    "manchestar city" : {
+      win: 4, draw: 2, loss: 1, goalsScored: 10, goalsAgaist: 5
     },
-    "Rising Pune Supergiant": {
-      win:4,
-      loss: 19,
-      draw:6
-    },
-    "Kings XI Punjab": {
-      win: 5,
-      loss: 20,
-      draw: 8
-    },
-    "Gujarat Lions": {
-      win: 5,
-      loss: 20,
-      draw: 8
-    },
-    "Delhi Daredevils": {
-      win: 5,
-      loss: 20,
-      draw: 8
-    },
-    "Deccan Chargers": {
-      win: 5,
-      loss: 20,
-      draw: 8
-    },
-    "Rajasthan Royals": {
-      win: 5,
-      loss: 20,
-      draw: 8
-    },
-    "Chennai Super Kings": {
-      win: 5,
-      loss: 20,
-      draw: 8
-    },
+    "manchestar chelsea" : {
+      win: 4, draw: 2, loss: 1, goalsScored: 10, goalsAgaist: 5
+    }
+  });
+});
+
+app.get('/api/getTeamList', function(req, res) {
+  res.json([
+    "arsenal", "manchestar united", "manchester city", "chelsea"
+  ]);
+});
+
+app.get('/api/getTeamPerformace', function(req, res) {
+  res.json({
+    win: 4, draw: 2, loss: 1, goalsScored: 10, goalsAgaist: 5
   });
 });
 
